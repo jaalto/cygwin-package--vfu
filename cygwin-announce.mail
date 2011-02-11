@@ -1,6 +1,6 @@
 To: cygwin-announce@cygwin.com
-Subject: Updated: package N.N
-Subject: New package: vfu 4.06-1 -- A mc-like versatile text-based filemanager
+Subject: Updated: vfu 4.10-1 -- A mc-like versatile text-based filemanager
+--text follows this line--
 
 PACKAGE DESCRIPTION
 ===================
@@ -18,7 +18,7 @@ Automount feature; Extensive user-defined external support/utils.
 CHANGES SINCE LAST RELEASE
 ==========================
 
-See /usr/share/doc/vfu-*/HISTORY
+See /usr/share/doc/vfu/HISTORY
 
 INSTALL OR UPGRADE NOTES
 ========================
