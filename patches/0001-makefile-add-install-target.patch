@@ -1,0 +1,80 @@
+From 58a791069569fee9c026bd626fd33074ced0bbc0 Mon Sep 17 00:00:00 2001
+From: Jari Aalto <jari.aalto@cante.net>
+Date: Wed, 12 Mar 2008 09:46:07 +0200
+Subject: [PATCH] makefile: add install target
+
+Signed-off-by: Jari Aalto <jari.aalto@cante.net>
+---
+ makefile |   50 +++++++++++++++++++++++++++++++++++++++++++++++++-
+ 1 files changed, 49 insertions(+), 1 deletions(-)
+
+diff --git a/makefile b/makefile
+index 3082edd..a796c10 100644
+--- a/makefile
++++ b/makefile
+@@ -4,6 +4,37 @@
+ 
+ ### Created by makemake.pl on Sun Dec 15 20:23:25 2002 #########################
+ 
++DESTDIR		=
++prefix		= /usr
++exec_prefix	= $(prefix)
++man_prefix	= $(prefix)/share
++
++PACKAGE		= vfu
++INSTALL		= /usr/bin/install
++INSTALL_BIN	= $(INSTALL) -m 755
++INSTALL_SUID	= $(INSTALL) -m 4755
++INSTALL_DATA	= $(INSTALL) -m 644
++
++INSTALL_OBJS_BIN   = vfu/$(PACKAGE)
++INSTALL_OBJS_MAN1  = *.1
++INSTALL_OBJS_MAN5  = *.5
++INSTALL_OBJS_SHARE =
++INSTALL_OBJS_ETC   = vfu.conf
++INSTALL_OBJS_LIB   = rx/rx_*
++
++BINDIR		= $(DESTDIR)$(exec_prefix)/bin
++SHAREDIR	= $(DESTDIR)$(prefix)/share/$(PACKAGE)
++LIBDIR		= $(DESTDIR)$(prefix)/lib/$(PACKAGE)
++SBINDIR		= $(DESTDIR)$(exec_prefix)/sbin
++ETCDIR		= $(DESTDIR)/etc/$(PACKAGE)
++DOCDIR		= $(DESTDIR)$(prefix)/share/doc
++
++# 1 = regular, 5 = conf, 6 = games, 8 = daemons
++MANDIR		= $(DESTDIR)$(man_prefix)/man
++MANDIR1		= $(MANDIR)/man1
++MANDIR5		= $(MANDIR)/man5
++MANDIR6		= $(MANDIR)/man6
++MANDIR8		= $(MANDIR)/man8
+ 
+ ### GLOBAL TARGETS #############################################################
+ 
+@@ -53,6 +84,23 @@ link-modules:
+ 	make -C vslib link
+ 	make -C vfu link
+ 
++install-man:
++	# install-man
++	$(INSTALL_BIN) -d $(MANDIR1)
++	$(INSTALL_DATA) $(INSTALL_OBJS_MAN1) $(MANDIR1)
+ 
+-### MAKEMAKE ENDS HERE #########################################################
++install-bin:
++	# install-bin
++	$(INSTALL_BIN) -d $(BINDIR)
++	$(INSTALL_BIN) -s $(INSTALL_OBJS_BIN) $(BINDIR)
++	$(INSTALL_BIN) -d $(ETCDIR)
++	$(INSTALL_DATA) $(INSTALL_OBJS_ETC) $(ETCDIR)
++	$(INSTALL_BIN) -d $(LIBDIR)
++	$(INSTALL_DATA) $(INSTALL_OBJS_LIB) $(LIBDIR)
++
++install: install-man install-bin
+ 
++.PHONY: install-bin install-man
++.PHONY: modules clean-modulesrebuild-modules link-modules
++
++### MAKEMAKE ENDS HERE #########################################################
+-- 
+1.5.3.8
+

@@ -1,0 +1,76 @@
+vfu
+------------------------------------------
+
+A mc-like versatile text-based filemanager
+
+A nice filemanager using the ncurses library. It has many nice
+features: Fast one-key commands; Filename completion and wildcard
+expansion; Directory tree with sizes; File-type colorization; Archives
+support (TAR, TGZ, BZ2, and many more); FTP support through
+archive-like interface; Internal text/hex file viewer and hex editor;
+Automount feature; Extensive user-defined external support/utils.
+
+Runtime requirements:
+  cygwin
+  libncurses8
+  libpcre0
+  perl
+  unzip *
+  tar *
+  bzip2 *
+
+  [*] See /usr/lib/vfu/*
+
+Build requirements:
+  cygwin
+  libncurses-devel
+  pcre-devel
+
+Canonical homepage:
+  http://cade.datamax.bg/vfu
+  http://packages.debian.org/unstable/vfu
+
+Canonical download:
+  See above
+
+Version control repository:
+
+Mailing list:
+
+Forum / Wiki:
+
+IRC channel:
+
+Upstream contact:
+  Maintainer: Vladi Belperchinov-Shabanski <cade@biscom.net>
+  Bugs: Vladi Vladi Belperchinov-Shabanski <cade@biscom.net>
+
+License:
+  GPL
+
+Language:
+  C
+
+------------------------------------------
+
+Build instructions:
+  unpack vfu-*-src.tar.bz2
+    if you use setup to install this source package, it will be
+    unpacked under /usr/src automatically
+  cd /usr/src
+  ./vfu*.sh all
+
+------------------------------------------
+
+Files included in the binary distribution:
+  See content of *.tar.gz
+
+------------------------------------------
+
+Port Notes:
+
+----- version 4.06-1 -----
+- Initial release 2008-03-12 Jari Aalto
+
+Cygwin port maintained by: Jari Aalto <jari.aalto@cante.net>
+Copyright (C) 2008 Jari Aalto; Licensed under GPL v2 or later

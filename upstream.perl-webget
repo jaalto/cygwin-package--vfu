@@ -1,0 +1,2 @@
+tag1: vfu
+  http://packages.debian.org/unstable/vfu pregexp:orig.tar.gz file:vfu_4.06.orig.tar.gz new: x:

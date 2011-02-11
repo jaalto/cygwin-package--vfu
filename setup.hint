@@ -1,0 +1,9 @@
+sdesc: "A mc-like versatile text-based filemanager"
+ldesc: "A nice filemanager using the ncurses library. It has many nice
+features like: Fast one-key commands; Filename completion and wildcard
+expansion; Directory tree with sizes; File-type colorization; Archives
+support (TAR, TGZ, BZ2, and many more); FTP support through
+archive-like interface; Internal text/hex file viewer and hex editor;
+Automount feature; Extensive user-defined external support/utils."
+category: Utils
+requires: cygwin libncurses8 libpcre0 perl unzip tar bzip2
