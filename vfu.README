@@ -12,9 +12,9 @@ Automount feature; Extensive user-defined external support/utils.
 
 Runtime requirements:
   libgcc1
-  libncurses10
+  libncursesw10
   libstdc++6
-  libpcre0
+  libpcre1
   perl
   unzip *
   tar *
