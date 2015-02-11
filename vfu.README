@@ -25,6 +25,7 @@ Runtime requirements:
 Build requirements:
   libncurses-devel
   pcre-devel
+  quilt
 
 Canonical homepage:
   http://cade.datamax.bg/vfu
@@ -72,6 +73,7 @@ Port Notes:
 ----- version 4.10-2 -----
 - New packaging 2015-02-11 Jari Aalto
 - Minor updates. e.g. rm libgcc1 fro setup.hint
+- Use quilt for patches
 
 ----- version 4.10-1 -----
 - New upstream release 2011-02-11 Jari Aalto
