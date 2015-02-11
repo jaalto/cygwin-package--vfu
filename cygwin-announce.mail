@@ -1,5 +1,5 @@
 To: cygwin-announce@cygwin.com
-Subject: Updated: vfu 4.10-1 -- A mc-like versatile text-based filemanager
+Subject: Updated: vfu 4.10-2 -- A mc-like versatile text-based filemanager
 --text follows this line--
 
 PACKAGE DESCRIPTION
@@ -24,6 +24,7 @@ INSTALL OR UPGRADE NOTES
 ========================
 
 Standard install.
+Cygwin packaging updated. No user visible changes.
 
 CYGWIN INSTALLATION INFORMATION
 ===============================
