@@ -6,4 +6,4 @@ support (TAR, TGZ, BZ2, and many more); FTP support through
 archive-like interface; Internal text/hex file viewer and hex editor;
 Automount feature; Extensive user-defined external support/utils."
 category: Utils
-requires: libgcc1 libncursesw10 libstdc++6 libpcre1 perl unzip tar bzip2
+requires: libncursesw10 libpcre1 libstdc++6 perl unzip tar bzip2
